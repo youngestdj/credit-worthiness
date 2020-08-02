@@ -1,23 +1,27 @@
-$body-text-color: #fff;
+$body-text-color: #ffffff;
+$grey: #ddd;
+$submit-button-color: #fd862f;
+$submit-button-border: #f5a;
+$error: #fc5151;
 
 @font-face {
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/OpenSans-Regular.ttf") format("opentype");
+  src: url('../fonts/OpenSans-Regular.ttf') format('opentype');
 }
 
 @font-face {
   font-family: Open Sans bold;
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/OpenSans-Bold.ttf") format("opentype");
+  src: url('../fonts/OpenSans-Bold.ttf') format('opentype');
 }
 html {
   min-height: 100vh;
 }
 body {
-  font-family: "Open Sans", serif;
+  font-family: 'Open Sans', serif;
   color: $body-text-color;
   font-size: 1.5em;
   background-image: linear-gradient(
@@ -52,20 +56,20 @@ form {
 
 input {
   display: block;
-  border: 1px solid #ddd;
+  border: 1px solid $grey;
   padding: 15px 20px;
   margin: 7px 0;
   width: 100%;
   box-sizing: border-box;
   background-color: transparent;
-  color: #fff;
+  color: $body-text-color;
 }
-input[type="submit"] {
-  background-color: #fd862f;
+input[type='submit'] {
+  background-color: $submit-button-color;
   cursor: pointer;
-  color: #fff;
+  color: $body-text-color;
   font-weight: bold;
-  border: 1px solid #f5a;
+  border: 1px solid $submit-button-border;
 }
 .firstname,
 .lastname {
@@ -78,17 +82,35 @@ input[type="submit"] {
 .lastname {
   float: right;
 }
-a {
-  color: #f50;
-  text-decoration: none;
-}
+
 .errors {
   width: 500px;
   margin: auto;
   box-sizing: border-box;
-  border: 1px solid #f53838;
+  border: 1px solid $error;
   padding: 15px;
   line-height: 1.5em;
-  color: #fc5151;
+  color: $error;
   font-size: 0.6em;
+}
+h1 {
+  text-align: center;
+}
+@media (max-width: 960px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  form,
+  .errors {
+    width: 90%;
+  }
+  .firstname,
+  .lastname {
+    width: 100%;
+    display: block;
+    float: none;
+  }
 }

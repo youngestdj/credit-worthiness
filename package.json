@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production",
+    "build-dev": "webpack --mode development",
+    "build-prod": "webpack --mode production",
     "start:dev": "webpack-dev-server --env.mode development --open --hot",
     "start": "node server.js",
     "preinstall": "rm -rf dist",

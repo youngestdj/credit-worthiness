@@ -19,7 +19,6 @@ const Home = () => {
     balance: null,
   });
   const { credits, debits, balance } = user;
-  console.log(user);
 
   const [errors, setErrors] = useState(false);
   const { firstname, lastname, email, amount } = input;
@@ -131,6 +130,7 @@ const Home = () => {
           <LoanLimit />
         ) : (
           <form>
+            <h1>Enroll</h1>
             <input
               type="text"
               name="firstname"
